@@ -1,0 +1,79 @@
+sfeedpath="$HOME/.local/share/sfeed/feeds"
+
+! [ -f "$SFEED_URL_FILE" ] && echo "Creating sfeed url file." && mkdir -p "$(echo $SFEED_URL_FILE | sed 's/\/[a-z]*$//g')" &&  touch "$SFEED_URL_FILE"
+
+#override fetch command to fix some feeds not downloading
+fetch() {
+    # fail on redirects, hide User-Agent, timeout is 15 seconds.
+    curl -L --max-redirs 5 -H "User-Agent:" -f -s -m 15 \
+    "$2" 2>/dev/null
+}
+
+# list of feeds to fetch:
+feeds() {
+# feed <name> <feedurl> [basesiteurl] [encoding]
+#    sfeedpath
+# get youtube Atom feed: curl -s -L 'https://www.youtube.com/user/gocoding/videos' | sfeed_web | cut -f 1
+#
+
+#NEWS
+    #feed "Breaking911" "https://breaking911.com/feed"
+    feed "Revolver News" "https://www.revolver.news/feed/"
+
+#Tech
+    feed "NEWS Phoronix" "https://www.phoronix.com/rss.php"
+    feed "TheHackerNews" "https://feeds.feedburner.com/TheHackersNews"
+    feed "Arch Linux News" "https://archlinux.org/feeds/news/"
+    feed "Suckless" "http://suckless.org/atom.xml"
+    feed "Codemadness" "https://www.codemadness.nl/atom.xml"
+
+#Linux Distros
+    #feed "LibreELEC" "https://libreelec.tv/feed/"
+    #feed "Artix Linux" "https://artixlinux.org/feed.php"
+    feed "Alpine Linux" "https://www.alpinelinux.org/atom.xml"
+
+#Youtube
+    #feed "VIDS YT HydeWars" "https://www.youtube.com/feeds/videos.xml?channel_id=UCfUaZ8Ra7m7BqUEACv2jySw"
+    #feed "VIDS YT MilleniaThinker" "https://www.youtube.com/feeds/videos.xml?channel_id=UC3TUCGI-7rSjvHsE4ONXRww"
+    #feed "VIDS YT MentalOutlaw" "https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA"
+    #feed "VIDS YT The Bioneer" "https://www.youtube.com/feeds/videos.xml?channel_id=UCIh_TPYPqjJuS_-nOfAIlfg"
+#Bitchute
+    feed "VIDS BIT Paul Joseph Watson" "https://www.bitchute.com/feeds/rss/channel/pauljosephwatson/"
+    feed "VIDS BIT Liberum Arbitrium" "https://www.bitchute.com/feeds/rss/channel/liberum-arbitrium/"
+    #feed "VIDS BIT Keith Woods" "https://www.bitchute.com/feeds/rss/channel/keithwoods/"
+    feed "VIDS BIT PaxTube" "https://www.bitchute.com/feeds/rss/channel/paxtube/"
+    #feed "VIDS BIT MisterMetokur" "https://www.bitchute.com/feeds/rss/channel/mistermetokur/"
+
+#Anime
+    #feed "VIDS YT RetroCrush" "https://www.youtube.com/feeds/videos.xml?channel_id=UCPZkYpT5XIUou8sV8zk-3jQ"
+    feed "VIDS YT DemolitionD" "https://www.youtube.com/feeds/videos.xml?channel_id=UCcAvljdM2NMdMYq_pvT9pBw"
+    feed "VIDS YT Merryweather Comics" "https://www.youtube.com/feeds/videos.xml?channel_id=UCvCtIO1it51jSkZGibS9R3w"
+    #feed "VIDS YT Super Eyepatch Wolf" "https://www.youtube.com/feeds/videos.xml?channel_id=UCtGoikgbxP4F3rgI9PldI9g"
+    #feed "VIDS YT Pikamee" "https://www.youtube.com/feeds/videos.xml?channel_id=UCajhBT4nMrg3DLS-bLL2RCg"
+    #feed "VIDS YT ChoobiePatootie" "https://www.youtube.com/feeds/videos.xml?channel_id=UCESCrvsa2H5hNMmBbgkAWdQ"
+
+#Podcasts
+    #feed "POD The Dick Show" "https://thedickshow.com/feed/podcast/rss"
+    feed "POD Not Related" "https://notrelated.xyz/rss"
+
+#Baisudo
+    feed "Luke Smith Vids" "https://videos.lukesmith.xyz/feeds/videos.xml?accountId=3"
+    feed "Luke Smith" "https://lukesmith.xyz/rss.xml"
+    feed "Stonetoss" "https://stonetoss.com/index.php/comic/feed/"
+    #feed "VIDS YT John Doyle" "https://www.youtube.com/feeds/videos.xml?channel_id=UCzZpgppwC_XQMe8lFiI77-Q"
+    #feed "VIDS YT The New Pill" "https://www.youtube.com/feeds/videos.xml?channel_id=UCiUkcNS6W0n8QdosuZASduQ"
+
+#Boogaloo
+    #feed "VIDS YT Booligan Shooting Sports" "https://www.youtube.com/feeds/videos.xml?channel_id=UCzcWHu-x6oWOHxwZTfhrXug"
+    feed "CtrlPew" "https://ctrlpew.com/feed"
+    #feed "VIDS YT Bushradical" "https://www.youtube.com/feeds/videos.xml?channel_id=UCo698VL13Dip93yh0f4Rc5Q"
+    
+#Crypto
+    #feed "Chainlink Blog" "https://blog.chain.link/rss/"
+    feed "GetMonero" "https://www.getmonero.org/feed.xml"
+
+#Misc
+    #feed "VIDS YT Primitive Technology" "https://www.youtube.com/feeds/videos.xml?channel_id=UCAL3JXZSzSm8AlZyD3nQdBA"
+
+    feed "based.cooking" "https://based.cooking/index.xml"
+}

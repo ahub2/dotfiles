@@ -1,0 +1,214 @@
+Xft.autohint: 1
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+Xcursor.theme: Adwaita
+
+! urxvt
+urxvt.font:                   xft:mono:size=10:antialias=true:hinting=true
+urxvt.url-launcher:           /usr/bin/xdg-open
+urxvt.matcher.button:         1
+urxvt.matcher.pattern.0:      \\b([a-zA-Z]+:\/\/\\w[\\w-.@:]*|www\\.\\w[\\w-]*\\.\\w[\\w-.]*)(\/[^"' ()]*)?
+urxvt.scrollBar:              false
+urxvt.termName:               xterm-256color
+urxvt.saveLines:              10000
+urxvt.inheritPixmap:          true
+urxvt.shading:                20
+urxvt.clipboard.autocopy:     true
+urxvt.perl-ext-common:        default,selection-to-clipboard,pasta,matcher,keyboard-select,resize-font,font
+urxvt.keysym.M-u:             perl:url-select:select_next
+urxvt.transparent:            true
+urxvt.buffered:               true
+urxvt.jumpScroll:             false
+urxvt.scrollTtyKeypress:      true
+urxvt.scrollTtyOutput:        false
+urxvt.scrollWithBuffer:       false
+urxvt.scrollstyle:            plain
+urxvt.secondaryScroll:        false
+urxvt.xftAntialias:           true
+!urxvt.color4:                 RoyalBlue
+urxvt.matcher.rend.0:         Bold fg6
+urxvt.cursorBlink:            false
+urxvt.cursorColor:            #5f8fff
+urxvt.mapAlert:               true
+urxvt.pointerBlank:           true
+urxvt.resource:               value
+urxvt.iso14755:               false
+urxvt.iso14755_52:            false
+
+!xterm font
+XTerm.vt100.faceName: mono:size=10
+
+!st settings
+*.font: mono:pixelsize=13
+*.borderpx:  2
+*.tabspaces: 4
+!cursorColor  STRING,  &colorname[258] },
+!termname     STRING,  &termname },
+!shell        STRING,  &shell },
+*.xfps: 30 
+!actionfps    INTEGER, &actionfps },
+!blinktimeout INTEGER, &blinktimeout },
+*.bellvolume: 100   !INTEGER, &bellvolume },
+!cwscale      FLOAT,   &cwscale },
+!chscale      FLOAT   &chscale },
+
+!dmenu settings
+dmenu.font : mono:pixelsize=13 
+
+
+/*** COLOR SETTINGS ***/
+
+!global colors
+#define WHITE      #ffffff
+#define BLACK      #000000
+
+/* include color theme. theme can be set using ~/scripts/set_colors.sh*/
+#include "./color"
+
+!if COLOR15 is not defined, there is an error in ~/.config/colors. default to nord 
+#ifndef COLOR15
+
+#define COLOR0  #3B4252
+#define COLOR1  #BF616A
+#define COLOR2  #A3BE8C
+#define COLOR3  #EBCB8B
+#define COLOR4  #81A1C1
+#define COLOR5  #B48EAD
+#define COLOR6  #88C0D0
+#define COLOR7  #E5E9F0
+#define COLOR8  #4C566A
+#define COLOR9  #BF616A
+#define COLOR10  #A3BE8C
+#define COLOR11  #EBCB8B
+#define COLOR12  #81A1C1
+#define COLOR13  #B48EAD
+#define COLOR14  #8FBCBB
+#define COLOR15  #ECEFF4
+
+#define FOREGROUND #D8DEE9
+#define BACKGROUND #2E3440
+
+#define DWM_NBDR   COLOR13
+#define DWM_NBG    BACKGROUND
+#define DWM_NFG    COLOR6
+#define DWM_SBDR   WHITE
+#define DWM_SBG    #434C5E
+#define DWM_SFG    COLOR13
+
+#endif 
+
+/* DWM colors 
+ * dwm.normbordercolor:   border not currently selected 
+ * dwm.normbgcolor:       bg of top bar, bg of not selected tags, bg of dmenu 
+ * dwm.normfgclolor:      ??? 
+ * dwm.selbordercolor:    active window border color, color of selected entry in dmenu 
+ * dwm.selbgcolor:        selected tag color, color of section of top bar displaying window title 
+ * dwm.selfgcolor:        color of window title text, color of current tag indicator,  
+ */
+
+!source dwm colors from color pallete if not defined
+#ifndef DWM_NBDR
+    #define DWM_NBDR COLOR8 
+#endif
+#ifndef DWM_NBG
+    #define DWM_NBG COLOR0 
+#endif
+#ifndef DWM_NFG
+    #define DWM_NFG COLOR15  
+#endif
+#ifndef DWM_SBDR 
+    #define DWM_SBDR COLOR15
+#endif
+#ifndef DWM_SBG
+    #define DWM_SBG COLOR2 
+#endif
+#ifndef DWM_FBG
+    #define DWM_FBG COLOR15 
+#endif
+
+!source dmenu colors from color pallette if not defined
+#ifndef DMENU_NBG
+    #define DMENU_NBG  COLOR0
+#endif
+#ifndef DMENU_NFG
+    #define DMENU_NFG  COLOR15
+#endif
+#ifndef DMENU_SBG
+    #define DMENU_SBG  COLOR1
+#endif
+#ifndef DMENU_SFG
+    #define DMENU_SFG  COLOR15
+#endif
+
+
+! 6 11 14
+#define AAAA COLOR6
+
+#ifndef DMENU_SHFG
+    #define DMENU_SHFG  AAAA
+#endif
+
+#ifndef DMENU_SHBG
+    #define DMENU_SHBG  COLOR1
+#endif
+
+#ifndef DMENU_NHFG
+    #define DMENU_NHFG  AAAA
+#endif
+
+#ifndef DMENU_NHBG
+    #define DMENU_NHBG  COLOR0
+#endif
+
+
+!source colors for BG and FG if not defined
+#ifndef BACKGROUND
+    #define BACKGROUND COLOR0
+#endif
+#ifndef FOREGROUND
+    #define FOREGROUND COLOR15
+#endif
+
+
+
+!set dwm colors defined in included file above
+dwm.normbordercolor: DWM_NBDR    
+dwm.normbgcolor:     DWM_NBG   
+dwm.normfgclolor:    DWM_NFG
+dwm.selbordercolor:  DWM_SBDR
+dwm.selbgcolor:      DWM_SBG
+dwm.selfgcolor:      DWM_SFG
+
+!set dmenu colors defined in included file above
+dmenu.background :    DMENU_NBG 
+dmenu.foreground :    DMENU_NFG
+dmenu.selbackground : DMENU_SBG
+dmenu.selforeground : DMENU_SFG 
+
+dmenu.selhighlightfg : DMENU_SHFG
+dmenu.selhighlightbg : DMENU_SHBG
+dmenu.normhighlightfg : DMENU_NHFG
+dmenu.normhighlightbg : DMENU_NHBG
+
+/* ST/Xterm colors */
+*.color0:     COLOR0 
+*.color1:     COLOR1 
+*.color2:     COLOR2 
+*.color3:     COLOR3
+*.color4:     COLOR4
+*.color5:     COLOR5
+*.color6:     COLOR6
+*.color7:     COLOR7
+*.color8:     COLOR8
+*.color9:     COLOR9
+*.color10:    COLOR10
+*.color11:    COLOR11
+*.color12:    COLOR12
+*.color13:    COLOR13
+*.color14:    COLOR14
+*.color15:    COLOR15
+*.background: BACKGROUND
+*.foreground: FOREGROUND
