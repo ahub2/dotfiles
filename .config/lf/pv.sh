@@ -1,5 +1,9 @@
 #!/bin/sh
 
+img () {
+    chafa  "$1" --size="$2"x"$3" | sed 's/#/\n#/g'
+}
+
 W="$(($(tput cols)/2 - 10))"
 #H="$(tput lines)"
 
@@ -14,9 +18,9 @@ case "$fn" in
         *.zip) unzip -l "$1";;
         *.rar) unrar l "$1";;
         *.7z) 7z l "$1";;
-        *.jpg | *.JPG | *.jpeg) chafa "$fn" --size="$w"x"$h" ;;#viu -t "$1" -w "$2" ;;
-        *.png | *.svg | *.gif) chafa "$fn" --size="$w"x"$h" ;;
-        *.mp4 | *.mkv | *.webm | *.avi | *.mpg | *.mpeg | *.ogv | *.flv | *.wmv | *.WMV) ffmpegthumbnailer -i "$fn" -c jpeg -o - | chafa - --size="$w"x"$h";; 
+        *.jpg | *.JPG | *.jpeg) img "$fn" "$w" "$h";;
+        *.png | *.svg | *.gif) img "$fn" "$w" "$h";; #viu -t "$1" -w "$W" ;; #chafa "$fn" --size="$w"x"$h" ;;
+        *.mp4 | *.mkv | *.webm | *.avi | *.mpg | *.mpeg | *.ogv | *.flv | *.wmv | *.WMV) ffmpegthumbnailer -i "$fn" -c jpeg -o - | img - "$w" "$h";; 
         *.pdf) pdftotext "$1" -;;
         *) bat -f "$1";; #*) highlight -O ansi "$1" || cat "$1";;
 esac

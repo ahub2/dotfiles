@@ -82,7 +82,7 @@ if ! [ -f $HOME/.local/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting
 fi
 
 # prompt stuff
-pfetch
+colorscript -r
 
 #if [ -f "/usr/bin/starship" ]; then
 #    eval "$(starship init zsh)"
