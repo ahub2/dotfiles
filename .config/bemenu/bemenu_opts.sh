@@ -1,3 +1,4 @@
 #!/bin/sh
-#generated from: /home/alex/.config/bemenu/colors/base16-nord
-export BEMENU_OPTS="-H 22 --nb #2E3440 --nf #EBCB8B --hb #2E3440  --hf #ECEFF4 --sb #3B4252  --sf #ECEFF4 --tb #2E3440 --tf #EBCB8B --fb #2E3440 --ff #ffffff"
+#dmenu theme
+#export BEMENU_OPTS="-H 22   --tb #1d2021 --tf #fabd2f --hb #1d2021  --hf #ebdbb2 --sf #ebdbb2  --fb #1d2021 --sb #3c3836 --ff #ffffff --nb #1d2021  " #--nf #ebdbb2
+ export BEMENU_OPTS="-H 24 --tb #285577 --hb #285577 --tf #eeeeee --hf #eeeeee --nf #bbbbbb"

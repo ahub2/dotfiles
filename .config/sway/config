@@ -108,7 +108,7 @@ xwayland enable
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'exec "$HOME"/.local/init/init.sh -c'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -298,7 +298,8 @@ seat seat0 xcursor_theme Adwaita 10
 
 include /etc/sway/config.d/*
 
-exec ~/.local/init/init.sh -i ~/.local/init/startup
+exec sh ~/.local/scripts/gammastep-init.sh
+exec udiskie
 
 #do any computer specific setup here, monitor configs, etc.
 exec_always ~/.init.sh
