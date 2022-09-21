@@ -298,8 +298,10 @@ seat seat0 xcursor_theme Adwaita 10
 
 include /etc/sway/config.d/*
 
+#autostart programs
 exec sh ~/.local/scripts/gammastep-init.sh
 exec udiskie
+exec autotiling
 
 #do any computer specific setup here, monitor configs, etc.
 exec_always ~/.init.sh
