@@ -1,0 +1,8 @@
+profile laptop_only {
+    output eDP-1 enable
+}
+
+profile tv {
+    output "Sony SONY TV 0x00000101" enable 
+    output eDP-1 disable
+}
