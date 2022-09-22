@@ -302,6 +302,7 @@ include /etc/sway/config.d/*
 exec sh ~/.local/scripts/gammastep-init.sh
 exec udiskie
 exec autotiling
+exec_always kanshi
 
 #do any computer specific setup here, monitor configs, etc.
 exec_always ~/.init.sh
