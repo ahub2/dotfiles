@@ -18,8 +18,8 @@ export XCURSOR_THEME=Adwaita
 
 
 #other settings
-#export QT_QPA_PLATFORMTHEME="gtk2"  # Have QT use gtk2 theme. must have qt5-styleplugins installed
-export QT_QPA_PLATFORMTHEME="qt5ct"  #have QT use qt5ct theme  
+export QT_QPA_PLATFORMTHEME="gtk2"  # Have QT use gtk2 theme. must have qt5-styleplugins installed
+#export QT_QPA_PLATFORMTHEME="qt5ct"  #have QT use qt5ct theme  
 
 export GTK_THEME=Adwaita:dark
 
