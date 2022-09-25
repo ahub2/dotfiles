@@ -35,7 +35,7 @@ alias reboot='sudo reboot'
 alias shutdown='sudo shutdown'
 
 #programs
-alias trc='tremc -c @192.168.1.162:9091'
+alias trc="tremc -c @$TRNS_IP:9091"
 alias pm='pulsemixer'
 
 #Youtube

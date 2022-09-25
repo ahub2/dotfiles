@@ -78,6 +78,13 @@ export PATH="/opt/rocm/rocfft/bin:$PATH"
 #fix arduino ide issues
 export AWT_TOOLKIT=MToolkit
 
+#define variables used with transmission scripts
+export TRNS_IP="192.168.1.162"
+export TRNS_DL_DIR="/usr/local/etc/transmission/home/Downloads"
+
+#needed for whisper, may be able to get rid of at some point
+export HSA_OVERRIDE_GFX_VERSION=10.3.0
+
 
 #mount samba share, needs entry in /etc/fstab for this line to work
 # //192.168.1.218/storage /media/nagato cifs username=alex,pass=PASSWORD,workgroup=WORKGROUP,user,noauto 0 0
