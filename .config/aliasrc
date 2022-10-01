@@ -45,8 +45,6 @@ alias yd='youtube-dl'
 #dotfiles configuration alias
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME' 
 
-alias chrome='firejail chromium --ozone-platform-hint=auto'
-
 note() {
     NOTEFILE="$HOME/.cache/notes"
     if [ "$#" -lt 1 ]; then
