@@ -36,7 +36,7 @@ feeds() {
     #feed "VIDS YT HydeWars" "https://www.youtube.com/feeds/videos.xml?channel_id=UCfUaZ8Ra7m7BqUEACv2jySw"
     #feed "VIDS YT MilleniaThinker" "https://www.youtube.com/feeds/videos.xml?channel_id=UC3TUCGI-7rSjvHsE4ONXRww"
     #feed "VIDS YT MentalOutlaw" "https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA"
-    #feed "VIDS YT The Bioneer" "https://www.youtube.com/feeds/videos.xml?channel_id=UCIh_TPYPqjJuS_-nOfAIlfg"
+    feed "VIDS YT The Bioneer" "https://www.youtube.com/feeds/videos.xml?channel_id=UCIh_TPYPqjJuS_-nOfAIlfg"
 #Bitchute
     feed "VIDS BIT Paul Joseph Watson" "https://www.bitchute.com/feeds/rss/channel/pauljosephwatson/"
     feed "VIDS BIT Liberum Arbitrium" "https://www.bitchute.com/feeds/rss/channel/liberum-arbitrium/"
