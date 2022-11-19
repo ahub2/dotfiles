@@ -48,7 +48,7 @@ window#waybar {
 
 #idle_inhibitor, #mpd, #clock, #battery, #cpu, #memory, #network, #pulseaudio, #temperature, #custom-spotify, #tray, #mode {
     background:  transparent;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #3EF6F6;
     padding: 0 10px;
     margin: 0 2px;
 }
