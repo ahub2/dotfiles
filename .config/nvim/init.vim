@@ -13,6 +13,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'dense-analysis/ale'
     Plug 'chriskempson/base16-vim'
 
+    Plug 'ziglang/zig.vim'
+
     "language support
     Plug 'tbastos/vim-lua'
 call plug#end()
