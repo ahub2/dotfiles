@@ -22,6 +22,25 @@ window#waybar {
 }
 */
 
+#tags button.focused {
+    background: transparent;
+    /*color: #c9545d;*/
+    /*border-bottom: 2px solid #c9545d;*/
+    color: #3EF6F6;
+    border-bottom: 2px solid #3EF6F6;
+
+}
+
+#tags button.occupied {
+    background: transparent;
+    /*color: #c9545d;*/
+    /*border-bottom: 2px solid #c9545d;*/
+    color: #009A0B;
+    /*border-bottom: 2px solid #009A0B;*/   
+
+}
+
+
 #workspaces button {
     padding: 0 2px;
     background: transparent;
