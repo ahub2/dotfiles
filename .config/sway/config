@@ -309,6 +309,7 @@ exec sh ~/.local/scripts/gammastep-init.sh
 exec udiskie
 exec autotiling
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec sway-audio-idle-inhibit
 
 exec_always kanshi
 
