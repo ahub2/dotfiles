@@ -305,14 +305,17 @@ seat seat0 xcursor_theme Adwaita 10
 
 include /etc/sway/config.d/*
 
+#inhibit idle for fullscreen windows
+for_window [class=".*"] inhibit_idle fullscreen
+for_window [app_id=".*"] inhibit_idle fullscreen
+
 #autostart programs
 exec sh ~/.local/scripts/gammastep-init.sh
 exec udiskie
 exec autotiling
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec sway-audio-idle-inhibit
 
-exec_always kanshi
+exec kanshi
 
 #do any computer specific setup here, monitor configs, etc.
 exec_always ~/.init.sh

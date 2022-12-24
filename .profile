@@ -76,6 +76,10 @@ export PATH="/opt/rocm/rocfft/bin:$PATH"
 export PATH="/opt/rocm/rocfft/bin:$PATH"
 
 
+#fix pinentry-curses on nixos
+GPG_TTY=$(tty)
+export GPG_TTY
+
 #fix arduino ide issues
 export AWT_TOOLKIT=MToolkit
 
