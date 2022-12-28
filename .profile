@@ -83,6 +83,8 @@ export GPG_TTY
 #fix arduino ide issues
 export AWT_TOOLKIT=MToolkit
 
+export XDG_CURRENT_DESKTOP="sway"
+
 #define variables used with transmission scripts
 export TRNS_IP="192.168.1.162"
 export TRNS_DL_DIR="/usr/local/etc/transmission/home/Downloads"
