@@ -98,8 +98,6 @@ export HSA_OVERRIDE_GFX_VERSION=10.3.0
 #mount /media/nagato/ &
 #mount /media/bismarck &
 
-if [ "$(tty)" = /dev/tty1 ]; then
-    #exec dbus-launch river
-    exec dbus-launch sway
-    #exec dbus-launch Hyprland
-fi
+#if [ "$(tty)" = /dev/tty1 ]; then
+#    exec dbus-launch sway
+#fi
