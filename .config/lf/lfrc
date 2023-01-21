@@ -4,7 +4,7 @@ set shell sh
 set color256 true
 set icons true
 set ignorecase true
-#set drawbox true
+set drawbox true
 
 
 set previewer ~/.config/lf/pv.sh
