@@ -14,7 +14,7 @@ export PF_INFO="ascii title os kernel uptime pkgs memory shell wm"
 export XCURSOR_THEME=Adwaita
 
 #fix image previews in lf not working
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 
 
 #other settings

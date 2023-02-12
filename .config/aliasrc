@@ -45,6 +45,8 @@ alias yd='youtube-dl'
 #dotfiles configuration alias
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME' 
 
+alias distrobox='TERM=xterm-256color distrobox'
+
 note() {
     NOTEFILE="$HOME/.cache/notes"
     if [ "$#" -lt 1 ]; then

@@ -89,7 +89,7 @@ fi
 #    eval "$(starship init zsh)"
 #fi
 
-export TERM='xterm-256color'
+#export TERM='xterm-256color'
 
 # Load zsh-syntax-highlighting; should be last.
 source $HOME/.local/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
