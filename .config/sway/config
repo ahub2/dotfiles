@@ -32,8 +32,7 @@ set $menu bemenu-run | xargs swaymsg exec --
 #output HDMI-A-1 bg ~/.config/wall fill 
 #output DP-1 resolution 1920x1080 position 0,0
 #output DP-1 bg ~/.config/wall fill 
-output * bg ~/.config/wall fill 
-output VGA-1 disable
+output * bg ~/.config/wall fit 
 
 
 #

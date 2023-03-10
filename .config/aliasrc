@@ -30,9 +30,9 @@ alias sfe='$EDITOR ~/.config/sfeed/sfeedrc'
 alias mpvyl='mpv --ytdl-format=18 '
 
 #system power
-alias poweroff='sudo poweroff'
-alias reboot='sudo reboot'
-alias shutdown='sudo shutdown'
+#alias poweroff='sudo poweroff'
+#alias reboot='sudo reboot'
+#alias shutdown='sudo shutdown'
 
 #programs
 alias trc="tremc -c @$TRNS_IP:9091"
