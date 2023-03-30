@@ -90,6 +90,8 @@ fi
 #fi
 
 #export TERM='xterm-256color'
+[ -f "/home/alex/.ghcup/env" ] && source "/home/alex/.ghcup/env" # ghcup-env
 
 # Load zsh-syntax-highlighting; should be last.
 source $HOME/.local/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+

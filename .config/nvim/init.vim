@@ -9,15 +9,25 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
+
     Plug 'tpope/vim-fugitive'
     Plug 'dense-analysis/ale'
     Plug 'chriskempson/base16-vim'
 
-    Plug 'ziglang/zig.vim'
+    Plug 'vimwiki/vimwiki'
 
     "language support
     Plug 'tbastos/vim-lua'
+    Plug 'ziglang/zig.vim'
+
+
+
 call plug#end()
+
+"vimwiki
+set nocompatible
+filetype plugin on
+syntax on
 
 "enable ale completion
 let g:ale_completion_enabled = 1
@@ -43,6 +53,10 @@ let g:ale_completion_enabled = 1
 "split navigation
     nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
     nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+
+    nnoremap  <F2> :ALEGoToDefinition<Enter>
+
+    
 
 "make vim use system clipboard by default. ONLY FOR NEOVIM
     set clipboard+=unnamedplus
