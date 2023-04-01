@@ -76,9 +76,6 @@ export PATH="/opt/rocm/rocfft/bin:$PATH"
 export PATH="/opt/rocm/rocfft/bin:$PATH"
 
 
-#fix pinentry-curses on nixos
-GPG_TTY=$(tty)
-export GPG_TTY
 
 #fix arduino ide issues
 export AWT_TOOLKIT=MToolkit
@@ -98,6 +95,9 @@ export HSA_OVERRIDE_GFX_VERSION=10.3.0
 #mount /media/nagato/ &
 #mount /media/bismarck &
 
-#if [ "$(tty)" = /dev/tty1 ]; then
-#    exec dbus-launch sway
-#fi
+#fix pinentry-curses on nixos 
+#export GPG_TTY="$(tty)"
+
+if [ "$(tty)" = /dev/tty1 ]; then
+    exec dbus-launch sway
+fi
