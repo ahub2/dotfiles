@@ -94,3 +94,5 @@ fi
 # Load zsh-syntax-highlighting; should be last.
 source $HOME/.local/share/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
+
+[ -f "/home/alex/.local/share/ghcup/env" ] && source "/home/alex/.local/share/ghcup/env" # ghcup-env
