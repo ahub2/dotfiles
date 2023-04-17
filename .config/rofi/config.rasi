@@ -146,4 +146,4 @@ configuration {
   }
 }
 
-@theme "base16-gruvbox-dark-medium"
+@theme "colorscheme"
