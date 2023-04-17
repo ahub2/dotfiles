@@ -18,5 +18,5 @@ set $base0D #61afef
 set $base0E #c678dd
 set $base0F #be5046
 
-
+#fix swaybar text being too dim
 set $base04 #ffffff
