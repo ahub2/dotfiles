@@ -5,14 +5,10 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
-
-local g = vim.g
-local wo = vim.wo
-local bo = vim.bo
 local opt = vim.opt
 
-bo.tabstop = 4
-bo.shiftwidth = 4
-bo.expandtab = true
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
 
 opt.colorcolumn = "80"
