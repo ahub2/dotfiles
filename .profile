@@ -98,6 +98,6 @@ export HSA_OVERRIDE_GFX_VERSION=10.3.0
 #fix pinentry-curses on nixos 
 #export GPG_TTY="$(tty)"
 
-if [ "$(tty)" = /dev/tty1 ]; then
-    exec dbus-launch sway
-fi
+#if [ "$(tty)" = /dev/tty1 ]; then
+    #exec dbus-launch sway
+#fi

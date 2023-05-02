@@ -33,6 +33,9 @@ alias yd='yt-dlp'
 #dotfiles configuration alias
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME' 
 
+#containers
+alias gaming='distrobox enter gaming'
+
 
 note() {
     NOTEFILE="$HOME/.cache/notes"
