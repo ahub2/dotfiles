@@ -36,7 +36,7 @@ set $menu rofi -show run | xargs swaymsg exec --
 output * bg #305767 solid_color
 exec_always {
     if [ -f "$HOME"/.config/wall ]; then
-        swaymsg "output * bg ~/.config/wall fit"
+        swaymsg "output * bg ~/.config/wall fill"
     fi
 }
 
@@ -50,7 +50,7 @@ exec_always {
 # Example configuration:
 #
  exec swayidle -w \
-          timeout 900 'waylock &' \
+          timeout 900 'swaylock &' \
           timeout 1200 'swaymsg "output * dpms off"' \
                resume 'swaymsg "output * dpms on"' \
           before-sleep 'waylock &'
@@ -98,7 +98,8 @@ xwayland enable
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+Return exec $term -e distrobox enter main
+    bindsym $mod+Shift+Return exec $term
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -304,7 +305,7 @@ default_border pixel 2
 
 #set windows to float by default
 for_window [class="Matplotlib"] floating enable
-for_window [class="Steam"] floating enable
+#for_window [class="Steam"] floating enable
 
 #input config
 input type:pointer accel_profile flat

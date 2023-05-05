@@ -1,8 +1,8 @@
 #!/bin/sh
 
 img () {
-    chafa  "$1" --size="$2"x"$3" --animate=false | sed 's/#/\n#/g'
-    #chafa --format=symbols  "$1" --size="$2"x"$3"
+    #chafa  "$1" --size="$2"x"$3" --animate=false | sed 's/#/\n#/g'
+    chafa --format=symbols  "$1" --size="$2"x"$3"
 }
 
 W="$(($(tput cols)/2 - 10))"
