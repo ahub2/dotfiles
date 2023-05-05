@@ -40,15 +40,15 @@ alias gaming='distrobox enter gaming'
 
 note() {
     NOTEFILE="$HOME/.cache/notes"
-    if [ "$#" -lt 1 ]; then
+    if [ "$1" = "-l" ]; then
         cat "$NOTEFILE" 
     elif [ "$1" = "-e" ]; then
         $EDITOR "$NOTEFILE" 
-    elif [ "$1" = "-h" ]; then
+    elif [ $# -lt 1 ]; then
         echo "    usage: note this is a note"
         echo "          the line: \"this is a note\" is stored as a line in the file $NOTEFILE"
         echo ""
-        echo "          run this without arguments to view the contents of $NOTEFILE"
+        echo "       -l     ->   to view the contents of $NOTEFILE"
         echo "       -e     ->   edit note file with \$EDITOR"
         echo "       -h     ->   print this help menu"
     else

@@ -53,6 +53,7 @@ export SFEED_URL_FILE="$HOME/.local/share/sfeed/read"
 
 #set programs
 export EDITOR=nvim
+export BROWSER="browser.sh"
 
 
 #lf icons
