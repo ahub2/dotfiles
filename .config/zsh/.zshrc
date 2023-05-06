@@ -1,3 +1,26 @@
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.local/share/oh-my-zsh"
+
+! [ -d "$HOME"/.local/share/ ] && mkdir -p "$HOME"/.local/share
+
+if ! [ -d "$HOME"/.local/share/oh-my-zsh ]; then
+    echo "installing oh-my-zsh"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended --keep-zshrc"
+    echo "done installing oh-my-zsh"
+fi
+
+if ! [ -d "$HOME"/.local/share/oh-my-zsh/custom/themes/powerlevel10k ]; then
+    echo "installing powerlevel10k"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.local/share/oh-my-zsh/custom}/themes/powerlevel10k
+    echo "done installing powerlevel10k"
+fi
+
+if ! [ -d "$HOME"/.local/share/oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
+    echo "installing zsh-syntax-highlighting"
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.local/share/oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    echo "done installing zsh-syntax-highlighting"
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -7,9 +30,6 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -102,6 +122,8 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+compinit -d "$HOME"/.cache/zcompdump
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -110,7 +132,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.config/aliasrc
+[ -f ~/.config/aliasrc ] && source ~/.config/aliasrc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+cd "$HOME"
