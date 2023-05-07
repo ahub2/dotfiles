@@ -26,6 +26,7 @@ alias sfe='$EDITOR ~/.config/sfeed/sfeedrc'
 alias trc="tremc -c @$TRNS_IP:9091"
 alias pm='pulsemixer'
 alias vimw='nvim -c VimwikiIndex'
+alias dmenu='rofi -dmenu'
 
 #Youtube
 alias yv='pipe-viewer --resolution=480p' 
