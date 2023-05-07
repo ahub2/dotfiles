@@ -122,7 +122,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-compinit -d "$HOME"/.cache/zcompdump
+#compinit -d "$HOME"/.cache/zcompdump
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
