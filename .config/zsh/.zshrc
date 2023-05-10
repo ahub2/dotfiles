@@ -101,6 +101,8 @@ plugins=(
     git
     zsh-syntax-highlighting
     vi-mode
+    colored-man-pages
+    command-not-found
 )
 
 source $ZSH/oh-my-zsh.sh

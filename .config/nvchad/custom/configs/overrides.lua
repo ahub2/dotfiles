@@ -40,7 +40,7 @@ M.mason = {
     "clang-format",
 
     --my additions
-    "haskell-language-server",
+    --"haskell-language-server",
     "shellcheck",
   },
 }
