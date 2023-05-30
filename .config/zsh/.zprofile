@@ -64,7 +64,7 @@ export BROWSER="browser.sh"
 
 
 #lf icons
-[ -f "$HOME"/.config/lf/lf-icons.sh ] && source "$HOME"/.config/lf/lf-icons.sh
+[ -f "$HOME"/.config/lf/lf-icons.sh ] && . "$HOME"/.config/lf/lf-icons.sh
 
 #fixes  
 #fix weird terminal issues

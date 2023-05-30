@@ -134,6 +134,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#[ -f ~/.config/zsh/.zprofile ] && source ~/.config/zsh/.zprofile
+
 [ -f ~/.config/aliasrc ] && source ~/.config/aliasrc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

@@ -50,7 +50,7 @@ exec_always {
 # Example configuration:
 #
  exec swayidle -w \
-          timeout 900 'swaylock &' \
+          timeout 900 'waylock &' \
           timeout 1200 'swaymsg "output * dpms off"' \
                resume 'swaymsg "output * dpms on"' \
           before-sleep 'waylock &'
@@ -233,15 +233,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #custom keybinds
-bindsym XF86AudioRaiseVolume exec vol.sh -i 0.02 
-bindsym XF86AudioLowerVolume exec vol.sh -d 0.02 
-bindsym XF86AudioMute exec vol.sh --toggle-mute
+bindsym XF86AudioRaiseVolume exec ~/.local/scripts/vol.sh -i 0.02 
+bindsym XF86AudioLowerVolume exec ~/.local/scripts/vol.sh -d 0.02 
+bindsym XF86AudioMute exec ~/.local/scripts/vol.sh --toggle-mute
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 #bindsym $mod+p exec fixscr.sh --menu
-bindsym $mod+p exec get-pass.sh -c
-bindsym $mod+o exec browser.sh
-bindsym $mod+shift+s exec ss.sh -s 
+bindsym $mod+p exec ~/.local/scripts/get-pass.sh -c
+bindsym $mod+o exec ~/.local/scripts/browser.sh
+bindsym $mod+shift+s exec ~/.local/scripts/ss.sh -s 
 bindsym ctrl+alt+delete exec waylogout
 
 
