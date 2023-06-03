@@ -1,0 +1,6 @@
+
+[Default Applications]
+inode/directory=thunar.desktop
+application/x-gnome-saved-search=thunar.desktop
+video/=mpv.desktop
+image/=imv.desktop
