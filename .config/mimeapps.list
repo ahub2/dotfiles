@@ -1,6 +1,11 @@
-
 [Default Applications]
 inode/directory=thunar.desktop
 application/x-gnome-saved-search=thunar.desktop
 video/=mpv.desktop
 image/=imv.desktop
+video/quicktime=com.brave.Browser.desktop
+
+[Added Associations]
+video/quicktime=com.brave.Browser.desktop;
+image/png=imv.desktop;
+image/webp=imv.desktop;

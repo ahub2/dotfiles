@@ -99,7 +99,7 @@ xwayland enable
 #
     # Start a terminal
     bindsym $mod+Return exec $term -e distrobox enter main
-    bindsym $mod+Shift+Return exec $term
+    bindsym $mod+Shift+Return exec sh open-terminal.sh 
 
     # Kill focused window
     bindsym $mod+Shift+q kill
