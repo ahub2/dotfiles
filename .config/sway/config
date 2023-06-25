@@ -98,7 +98,7 @@ xwayland enable
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term -e distrobox enter main
+    bindsym $mod+Return exec sh open-terminal.sh main
     bindsym $mod+Shift+Return exec sh open-terminal.sh 
 
     # Kill focused window
