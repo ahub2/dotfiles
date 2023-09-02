@@ -98,8 +98,8 @@ xwayland enable
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec sh open-terminal.sh main
-    bindsym $mod+Shift+Return exec sh open-terminal.sh 
+    bindsym $mod+Return exec sh ~/.local/scripts/open-terminal.sh main
+    bindsym $mod+Shift+Return exec sh ~/.local/scripts/open-terminal.sh 
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -329,7 +329,7 @@ exec udiskie
 exec autotiling
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
-exec kanshi
+exec_always kanshi
 
 #do any computer specific setup here, monitor configs, etc.
 exec_always ~/.init.sh
