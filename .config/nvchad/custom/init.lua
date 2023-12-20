@@ -13,4 +13,4 @@ opt.expandtab = true
 
 opt.colorcolumn = "80"
 
-opt.textwidth = 80
+-- opt.textwidth = 80

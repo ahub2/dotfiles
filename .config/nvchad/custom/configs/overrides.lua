@@ -42,6 +42,7 @@ M.mason = {
     --my additions
     --"haskell-language-server",
     "shellcheck",
+    "python-lsp-server",
   },
 }
 

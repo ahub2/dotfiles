@@ -33,12 +33,15 @@ set $menu rofi -show run | xargs swaymsg exec --
 #output DP-1 bg ~/.config/wall fill 
 #output * bg ~/.config/wall fit 
 
+
 output * bg #305767 solid_color
 exec_always {
     if [ -f "$HOME"/.config/wall ]; then
         swaymsg "output * bg ~/.config/wall fill"
     fi
 }
+
+output * max_render_time 25 
 
 
 
@@ -93,6 +96,8 @@ mouse_warping container
 
 xwayland enable
 
+
+
 ### Key bindings
 #
 # Basics:
@@ -118,7 +123,7 @@ xwayland enable
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaymsg exit
 #
 # Moving around:
 #
@@ -304,6 +309,7 @@ gaps outer 10
 default_border pixel 2 
 
 
+
 #for_window [shell="^((?!xdg_shell).)*$"] title_format "%title :: %shell"
 for_window [shell=".*"] title_format "%title :: %shell"
 
@@ -314,7 +320,7 @@ for_window [class="Matplotlib"] floating enable
 
 #input config
 input type:pointer accel_profile flat
-input type:pointer pointer_accel -0.5
+input type:pointer pointer_accel -0.75
 seat seat0 xcursor_theme Adwaita 10
 
 include /etc/sway/config.d/*

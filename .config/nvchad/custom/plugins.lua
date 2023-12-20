@@ -48,10 +48,11 @@ local plugins = {
   },
 
   {
-    "vimwiki/vimwiki",
-    lazy = false,
+    "vim-pandoc/vim-pandoc"
   },
-
+  {
+    "vim-pandoc/vim-pandoc-syntax"
+  }
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
