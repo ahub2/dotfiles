@@ -32,6 +32,9 @@ export STACK_ROOT="$XDG_DATA_HOME"/stack
 export GDK_BACKEND=wayland 
 export MOZ_ENABLE_WAYLAND=1
 
+#make SDL applications use wayland
+export SDL_VIDEODRIVER=wayland
+
 #theming
 export GTK_THEME=Adwaita:dark
 export XCURSOR_THEME=Adwaita
