@@ -32,6 +32,9 @@ export STACK_ROOT="$XDG_DATA_HOME"/stack
 export GDK_BACKEND=wayland 
 export MOZ_ENABLE_WAYLAND=1
 
+#fix java windows
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 #make SDL applications use wayland
 export SDL_VIDEODRIVER=wayland
 
