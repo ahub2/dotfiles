@@ -36,7 +36,7 @@ export MOZ_ENABLE_WAYLAND=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 #make SDL applications use wayland
-export SDL_VIDEODRIVER=wayland
+#export SDL_VIDEODRIVER=wayland
 
 #theming
 export GTK_THEME=Adwaita:dark

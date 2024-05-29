@@ -5,6 +5,7 @@ set color256 true
 set icons true
 set ignorecase true
 set drawbox true
+set sixel true
 
 
 set previewer ~/.config/lf/pv.sh
