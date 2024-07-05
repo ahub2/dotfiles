@@ -315,7 +315,7 @@ for_window [shell=".*"] title_format "%title :: %shell"
 
 #set windows to float by default
 for_window [class="Matplotlib"] floating enable
-#for_window [class="Steam"] floating enable
+for_window [class="steam"] floating enable
 
 
 #input config

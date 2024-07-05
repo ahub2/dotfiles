@@ -1,17 +1,24 @@
 #!/bin/sh
+#
+fn="$1"
+W="$3"
+H="$2"
 
-case "$(file -Lb --mime-type -- "$1")" in
-        application/gzip) tar tf "$1";;
-        application/zip) unzip -l "$1";;
-        application/x-rar) unrar-free -t "$1";;
-        application/x-7z-compressed) 7z l "$1";;
+
+echo "W=$W H=$H" > ~/pv.log
+
+case "$(file -Lb --mime-type -- "$fn")" in
+        application/gzip) tar tf "$fn";;
+        application/zip) unzip -l "$fn";;
+        application/x-rar) unrar-free -t "$fn";;
+        application/x-7z-compressed) 7z l "$fn";;
         image/*) 
-            chafa -f sixel -s "$2"x"$3" --animate off --polite on "$1"
+            chafa -f sixel -s "$W"x"$H" --animate off --polite on "$fn"
             exit 1
             ;;
-        video/*) ffmpegthumbnailer -s 0 -i "$1" -c jpeg -o - | chafa -f sixel -s "$2"x"$3" --animate off --polite on -;; 
-        application/pdf) pdftotext "$1" -;;
-        *) bat -f "$1";; #*) highlight -O ansi "$1" || cat "$1";;
+        video/*) ffmpegthumbnailer -s 0 -i "$fn" -c jpeg -o - | chafa -f sixel -s "$W"x"$H" --animate off --polite on -;; 
+        application/pdf) pdftotext "$fn" -;;
+        *) bat -f "$fn";; #*) highlight -O ansi "$1" || cat "$1";;
 esac
 
 exit 0
