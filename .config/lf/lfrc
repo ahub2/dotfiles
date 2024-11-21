@@ -70,11 +70,11 @@ cmd open ${{
 # map r push :rename<space>
 
 # make sure trash folder exists
-%mkdir -p ~/.trash
+#%mkdir -p ~/.trash
 
 # move current file or selected files to trash folder
 # (also see 'man mv' for backup/overwrite options)
-cmd trash %set -f; mv $fx ~/.trash/
+cmd trash %set -f; trash-put -rf $fx
 
 # define a custom 'delete' command
 cmd delete ${{
@@ -82,7 +82,7 @@ cmd delete ${{
     printf "$fx\n"
     printf "delete?[y/n]"
     read ans
-    [ $ans = "y" ] && rm -rf $fx
+    [ $ans = "y" ] && srm -rf $fx
 }}
 
 # use '<backspace2>' key for either 'trash' or 'delete' command

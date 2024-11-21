@@ -33,7 +33,6 @@ set $menu rofi -show run | xargs swaymsg exec --
 #output DP-1 bg ~/.config/wall fill 
 #output * bg ~/.config/wall fit 
 
-
 output * bg #305767 solid_color
 exec_always {
     if [ -f "$HOME"/.config/wall ]; then
@@ -324,6 +323,8 @@ input type:pointer pointer_accel -0.75
 seat seat0 xcursor_theme Adwaita 10
 
 include /etc/sway/config.d/*
+
+include ~/.swayconf.local
 
 #inhibit idle for fullscreen windows
 for_window [class=".*"] inhibit_idle fullscreen

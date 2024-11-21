@@ -5,7 +5,7 @@ W="$3"
 H="$2"
 
 
-echo "W=$W H=$H" > ~/pv.log
+#echo "W=$W H=$H" > ~/pv.log
 
 case "$(file -Lb --mime-type -- "$fn")" in
         application/gzip) compress.sh -l "$fn";;
