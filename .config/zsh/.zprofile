@@ -58,7 +58,7 @@ export LESSHISTFILE="-"
 #export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 
 export MANPAGER=less
-export XDG_CURRENT_DESKTOP="sway"
+#export XDG_CURRENT_DESKTOP="sway"
 
 #sfeed vars
 export SFEED_PLUMBER="$BROWSER"

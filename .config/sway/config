@@ -338,6 +338,8 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 
 exec_always kanshi
 
+exec_always export XDG_CURRENT_DESKTOP="sway"
+
 #do any computer specific setup here, monitor configs, etc.
 exec_always ~/.init.sh
 
