@@ -1,3 +1,0 @@
-[submodule ".local/scripts"]
-	path = .local/scripts
-	url = git@github.com:ahub2/my-scripts.git

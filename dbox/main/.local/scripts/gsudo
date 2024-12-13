@@ -1,0 +1,3 @@
+#!/bin/sh
+# copied from: https://www.reddit.com/r/swaywm/comments/1cyw6x1/couldnt_run_gui_application_using_sudo_command/
+sudo -EH "$@"

@@ -1,0 +1,123 @@
+pkgname="ajh-base"
+pkgver="0.0.1"
+pkgver="0"
+pkgrel="1"
+pkgdesc="Install my config for Arch based systems."
+arch=("any")
+
+depends=( 
+#system core, provides core functionality like internet, sound, etc.
+"pipewire"
+"pipewire-alsa"
+"pipewire-pulse"
+"pipewire-jack"
+"gst-plugin-pipewire"
+"wireplumber"
+"alsa-utils"
+"freetype2"
+"gst-libav"
+"btrfs-progs"
+"fuse"
+#"mesa"
+#"libva-mesa-driver"
+"brightnessctl"
+"cifs-utils"
+
+#flatpak/xdg stuff
+"flatpak"
+"xdg-desktop-portal-wlr"
+"xdg-desktop-portal-gtk"
+"xdg-utils"
+"xdg-user-dirs"
+
+#system extra, extra programs that don't provide core functionality, but are still useful 
+"man-db"
+"pacman-contrib"
+"ufw"
+"wget"
+"curl"
+"zip"
+"unzip"
+"p7zip"
+"dash"
+"rsync"
+"cronie"
+"udisks2"
+"udiskie"
+"bc"
+"opendoas"
+"zsh"
+"openssh"
+"jq"
+"pamixer"
+"xorg-xhost" #needed to run graphical programs as root
+
+#libs/plugins
+"python-urwid"
+"qt5-wayland"
+
+#devel
+"clang"
+"python-pip"
+
+#misc
+"lynx"
+"aria2" #optional dependency of ani-cli
+
+#theming
+"noto-fonts" "noto-fonts-emoji" "noto-fonts-cjk" "ttf-mononoki-nerd"
+"lxappearance"
+"qt5ct"
+"archlinux-wallpaper"
+
+#tui, terminal programs and programs/libs used by them
+"tldr"
+"imagemagick"
+"ffmpegthumbnailer"
+"python-pdftotext"
+"chafa"
+"bat"
+"ncmpcpp"
+"mpc"
+"bc"
+"transmission-cli"
+"neovim"
+"libsixel"
+
+#desktop, programs related to setting up a graphical user interface
+#"sway"
+"swaybg"
+"swayidle"
+"swaylock"
+"waybar"
+"mako"
+"wl-clipboard"
+"grim"
+"slurp"
+"xorg-xwayland"
+"gammastep"
+"waylock"
+"foot"
+"foot-terminfo"
+"bemenu-wayland"
+"kanshi"
+
+#user applications
+"zathura" "zathura-cb" "zathura-djvu" "zathura-pdf-mupdf"
+"pavucontrol"
+"yt-dlp"
+"mpd"
+"mpv"
+"imv"
+
+ )
+
+optdepends=()
+
+license=("MIT")
+#sha512sums=("SKIP")
+
+
+package() {
+    echo "installing packages"
+}
