@@ -9,6 +9,15 @@ alias toolbox='TERM=xterm-256color toolbox'
 alias vim='nvim'
 alias mbsync="mbsync -c $HOME/.config/mbsync/config"
 
+alias "pkill bg3_dx11.exe"="echo STOP CHEATING!"
+pkill() {
+    if [ "$@" = "bg3_dx11.exe" ]; then
+        echo "STOP CHEATING!"
+    else
+        pkill "$@"
+    fi
+}
+
 #shortend commands
 alias btc='bluetoothctl'
 

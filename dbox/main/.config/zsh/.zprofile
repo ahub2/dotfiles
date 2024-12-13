@@ -1,6 +1,5 @@
 #!/bin/sh
 
-export ZDOTDIR="$HOME"/.config/zsh
 export HISTFILE="$HOME"/.cache/zsh_history
 ! [ -f "$HISTFILE" ] && mkdir "$HOME"/.cache/ && touch "$HISTFILE"
 
