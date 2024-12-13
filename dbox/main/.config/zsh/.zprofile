@@ -1,7 +1,6 @@
 #!/bin/sh
 
 export HISTFILE="$HOME"/.cache/zsh_history
-! [ -f "$HISTFILE" ] && mkdir "$HOME"/.cache/ && touch "$HISTFILE"
 
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -25,6 +24,10 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 
 export GHCUP_USE_XDG_DIRS=true
 export STACK_ROOT="$XDG_DATA_HOME"/stack
+
+#create dirs that may not exist
+! [ -f "$HISTFILE" ] && mkdir "$HOME"/.cache/ && touch "$HISTFILE"
+! [ -d "$GNUPGHOME" ] && mkdir -p $GNUPGHOME
 
 
 #make firefox/librewolf use wayland
