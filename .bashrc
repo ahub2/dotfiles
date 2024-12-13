@@ -27,5 +27,13 @@ fi
 unset rc
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/scripts:$PATH"
+export EDITOR=vi
+
+export LESSHISTFILE="-"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
 
 alias config="git --git-dir=$HOME/.cfg --work-tree=$HOME"
